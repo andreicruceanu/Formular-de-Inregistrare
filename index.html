@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular de Inregistrare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+            <div class="card">
+                <div class="interior-box" id="card">
+                    <div class="card-fata ">
+                        <h2>LOGIN</h2>
+                        <form>
+                            <input type="email" id="email" name="email" class="input-box" placeholder="Introduceti Email" required >
+                            <input type="password" id="password" name="password" class="input-box" placeholder="Parola" required>
+                             <button type="submit" class="buton btn-submit" >Trimite</button>
+                             <input type="checkbox"><span>Aminteste-mi</span>
+                        </form>
+                        <button type="button" class="buton btn-nou" onclick="deschideRegister()" >Sunt nou aici</button>
+                        <a href="#">Am uitat parola</a>
+                    </div>
+                    <div class="card-spate">
+                        <h2>REGISTER</h2>
+                        <form>
+                            <input type="text" id="nume" name="nume" class="input-box" placeholder="Introduceti Numele" required >
+                            <input type="email" id="email" name="email" class="input-box" placeholder="Introduceti Email" required >
+                            <input type="password" id="password" name="password" class="input-box" placeholder="Parola" required>
+                             <button type="submit" class="buton btn-submit" >Trimite</button>
+                             <input type="checkbox"><span>Aminteste-mi</span>
+                        </form>
+                        <button type="button" class="buton btn-nou" onclick="deschideLogin()" >Am deja cont</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+  <script>
+
+      let card = document.getElementById("card");
+
+
+    function deschideRegister() {
+        card.style.transform = "rotateY(-180deg)"
+    }
+    function deschideLogin() {
+        card.style.transform = "rotateY(0deg)"
+    }
+
+
+  </script>
+</body>
+</html>
